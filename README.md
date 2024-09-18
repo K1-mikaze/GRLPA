@@ -16,7 +16,7 @@
 
 <br clear="both">
 
-<h1 align="center">♻️ Bienvenido a GRLPA ♻💧<->♻💧Welcome to GRLPA♻️</h1>
+<h1 align="center">♻️ Bienvenido a GRLPA 🌧️<->🌧️Welcome to GRLPA♻️</h1>
 
 ###
 
