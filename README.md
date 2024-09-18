@@ -1,4 +1,3 @@
-# GRLPA
 <img align="right" height="150" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Facironline.mx%2Fwp-content%2Fuploads%2F2019%2F06%2Freciclar_acironline-1.png&f=1&nofb=1&ipt=541465479cff040fdee967f12c0d08d34d4dd8533f9f16bececee636581b4af7&ipo=images"  />
 
 ###
@@ -15,7 +14,9 @@
 
 ###
 
-<h1 align="center">♻️ Bienvenido a GRLPA ♻️<br>♻️Welcome to GRLPA♻️</h1>
+<br clear="both">
+
+<h1 align="center">♻️ Bienvenido a GRLPA ♻️<----->♻️Welcome to GRLPA♻️</h1>
 
 ###
 
@@ -39,7 +40,7 @@
 
 ###
 
-<h3 align="center">🛠 Lenguajes y Herramientas 🛠<----------------------->🛠 Language and tools 🛠</h3>
+<h3 align="center">🛠 Lenguajes y Herramientas 🛠<----------------------------------->🛠 Language and tools 🛠</h3>
 
 ###
 
