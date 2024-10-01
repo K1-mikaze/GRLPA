@@ -1,0 +1,3 @@
+Repositorio (Aquí van todas aquellas interfaces que tienen los métodos CRUD por defecto)
+
+Repository (Here we are going to save those interfaces that contain CRUD methods as default)

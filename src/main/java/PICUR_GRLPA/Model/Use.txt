@@ -1,0 +1,5 @@
+Modelo (aquí van las clases o entidades, estas son las tablas de la base de datos donde se definen los campos,
+ejemplo tenemos la tabla Empleados y los campos asociados a empleados son: Nombre, Apellido, etc...)
+
+Model (Here we are going to save classes and entities. The tables that we will use inside de data base are:
+For example, Empleados table with its columns like Name(Nombre), Surname(Apellido), etc..)

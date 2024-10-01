@@ -1,0 +1,5 @@
+Controlador (Son todas aquellas solicitudes HTTP que van a retornar el valor
+que nosotros destinemos (GET, POST, PUT, PATCH. DELETE)
+
+Controller (Here we gonna make those  HTTP request that will return us all the values we need
+(GET, POST, PUT, PATCH, DELETE)
