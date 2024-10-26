@@ -1,10 +1,8 @@
 package PICUR_GRLPA.Controller;
 import PICUR_GRLPA.Model.User;
 import PICUR_GRLPA.Repository.UserRepository;
-import jakarta.persistence.Id;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.yaml.snakeyaml.events.Event;
 
 import java.util.List;
 import java.util.Optional;
@@ -22,7 +20,7 @@ public class UserRestController{
     }
 
     @GetMapping("/usuarios/{id}")
-    public Optional<User> FindByName(@PathVariable("id") Long id) {
+    public Optional<User> Find_By_Id(@PathVariable("id") Long id) {
         return User_repository.findById(id);
     }
 
@@ -32,7 +30,7 @@ public class UserRestController{
     }
 
     @PutMapping("/usuario/{id}")
-    public User Update_User(@PathVariable int id,@RequestBody User user){
+    public User Update_User(@PathVariable Long id,@RequestBody User user){
         return User_repository.save(user);
     }
 

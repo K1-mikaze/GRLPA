@@ -1,47 +1,72 @@
 package PICUR_GRLPA.Model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "Usuarios") //CHANGE LIBRARY
+import static jakarta.persistence.GenerationType.SEQUENCE;
+
+@Entity(name = "usuarios")
+@Table(name = "usuarios",
+uniqueConstraints = {
+        @UniqueConstraint(name = "usuario_email_unique", columnNames = "email")
+})
 @EntityListeners(AuditingEntityListener.class)
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_usuario;
+    @SequenceGenerator(
+            name = "user_sequence",
+            sequenceName = "user_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(strategy = SEQUENCE,generator = "User_sequence"
+    )
+    @Column(
+            name = "id_usuario",
+            updatable = false
+    )
+    private Long id_usuario;
 
-    @Column(name = "nombre")
+    @Column(name = "nombre",
+            nullable = false,
+            columnDefinition = "VARCHAR(100)"
+    )
     private String name;
 
-    @Column(name = "apellido")
+    @Column(name = "apellido",
+            nullable = false,
+            columnDefinition = "VARCHAR(100)"
+    )
     private String surname;
 
-    @Column(name = "email")
+    @Column(name = "email",
+           nullable = false,
+            columnDefinition = "VARCHAR(320)"
+
+    )
     private String email;
 
-    @Column(name = "rol")
+    @Column(name = "rol",
+            nullable = false,
+            columnDefinition = "VARCHAR(150)"
+    )
     private String rol;
 
-    @Column(name = "fecha_registro")
+    @Column(name = "fecha_registro",
+            columnDefinition = "TIMESTAMP",
+            nullable = false,
+            updatable = false
+    )
     @CreatedDate
-    private LocalDateTime date;
+    private LocalDateTime date;//Formato 2007-10-1T11:10:30 YY-MM-DD T HH:MM:SS
 
     public User() {
     }
 
-    public User(int id_usuario, String name, String surname, String email, String rol, LocalDateTime date) {
-        this.id_usuario = id_usuario;
+    public User( String name, String surname, String email, String rol,LocalDateTime date) {
         this.name = name;
         this.surname = surname;
         this.email = email;
@@ -49,11 +74,11 @@ public class User {
         this.date = date;
     }
 
-    public int getId() {
+    public Long getId() {
         return id_usuario;
     }
 
-    public void setId(int id_usuario) {
+    public void setId(Long id_usuario) {
         this.id_usuario = id_usuario;
     }
 
