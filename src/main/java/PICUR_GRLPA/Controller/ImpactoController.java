@@ -16,27 +16,27 @@ public class ImpactoController {
     private ImpactoRepository Impacto_Repository;
 
     @GetMapping("/impactos")
-    public List<Impacto> AllImpactos(){
+    public List<Impacto> AllImpactos() {
         return Impacto_Repository.findAll();
     }
 
-    @GetMapping("/impacto/{id}")
+    @GetMapping("/impactos/{id}")
     public Optional<Impacto> Find_By_Id(@PathVariable("id") Long id) {
         return Impacto_Repository.findById(id);
     }
 
     @PostMapping("/impacto")
-    public Impacto Create_Impacto(@RequestBody Impacto impacto){
+    public Impacto Create_Impacto(@RequestBody Impacto impacto) {
         return Impacto_Repository.save(impacto);
     }
 
     @PutMapping("/impacto/{id}")
-    public Impacto Update_Impacto(@PathVariable Long id,@RequestBody Impacto impacto){
+    public Impacto Update_Impacto(@PathVariable Long id, @RequestBody Impacto impacto) {
         return Impacto_Repository.save(impacto);
     }
 
     @DeleteMapping("/impacto/{id}")
-    public void  Delete_Impacto(@PathVariable("id")Long id){
+    public void Delete_Impacto(@PathVariable("id") Long id) {
         Impacto_Repository.deleteById(id);
     }
 

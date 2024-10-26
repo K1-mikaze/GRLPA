@@ -20,7 +20,7 @@ public class EvaluacionController {
         return Evaluacion_Repository.findAll();
     }
 
-    @GetMapping("/evaluacion/{id}")
+    @GetMapping("/evaluaciones/{id}")
     public Optional<Evaluacion> Find_By_Id(@PathVariable("id") Long id) {
         return Evaluacion_Repository.findById(id);
     }

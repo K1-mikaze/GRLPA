@@ -20,7 +20,7 @@ public class NormativeController {
         return Normative_Repository.findAll();
     }
 
-    @GetMapping("/normativa/{id}")
+    @GetMapping("/normativas/{id}")
     public Optional<Normative> Find_By_Id(@PathVariable("id") Long id) {
         return Normative_Repository.findById(id);
     }

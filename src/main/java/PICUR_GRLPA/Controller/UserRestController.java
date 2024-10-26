@@ -1,4 +1,5 @@
 package PICUR_GRLPA.Controller;
+
 import PICUR_GRLPA.Model.User;
 import PICUR_GRLPA.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,13 +10,13 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/GRLPA")
-public class UserRestController{
+public class UserRestController {
 
     @Autowired
     private UserRepository User_repository;
 
     @GetMapping("/usuarios")
-    public List<User> AllUsers(){
+    public List<User> AllUsers() {
         return User_repository.findAll();
     }
 
@@ -25,17 +26,17 @@ public class UserRestController{
     }
 
     @PostMapping("/usuario")
-    public User Create_User(@RequestBody User user){
+    public User Create_User(@RequestBody User user) {
         return User_repository.save(user);
     }
 
     @PutMapping("/usuario/{id}")
-    public User Update_User(@PathVariable Long id,@RequestBody User user){
+    public User Update_User(@PathVariable Long id, @RequestBody User user) {
         return User_repository.save(user);
     }
 
     @DeleteMapping("/usuario/{id}")
-    public void  Delete_User(@PathVariable("id")Long id){
+    public void Delete_User(@PathVariable("id") Long id) {
         User_repository.deleteById(id);
     }
 }

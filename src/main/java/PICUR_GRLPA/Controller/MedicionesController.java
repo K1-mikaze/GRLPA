@@ -25,7 +25,7 @@ public class MedicionesController {
         return Mediciones_Repository.findById(id);
     }
 
-    @PostMapping("/mediciones")
+    @PostMapping("/medicion")
     public Medicion Create_Medicion(@RequestBody Medicion medicion){
         return Mediciones_Repository.save(medicion);
     }

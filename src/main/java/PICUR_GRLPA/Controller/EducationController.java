@@ -21,7 +21,7 @@ public class EducationController {
         return Education_Repository.findAll();
     }
 
-    @GetMapping("/educacion/{id}")
+    @GetMapping("/educaciones/{id}")
     public Optional<Education> Find_By_Id(@PathVariable("id") Long id) {
         return Education_Repository.findById(id);
     }
